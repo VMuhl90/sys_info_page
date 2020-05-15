@@ -2,12 +2,14 @@
 # Program to output a system information page on a different branch
 
 TITLE="System Information Report For $HOSTNAME"
-
-echo "<html>"
-echo "
-echo "
-echo "
-echo "
-echo "
-echo "
-echo "</html>"
+CURRENT_TIME="$(date +"%x %r %Z")"
+TIMESTAMP="Generated $CURRENT_TIME, by $USER"
+echo "<html>
+        <head>
+                <title>$TITLE</title>
+        </head>
+<body>
+<h1>$TITLE</h1>
+<p>$TIMESTAMP</p>
+ </body>
+</html>"
